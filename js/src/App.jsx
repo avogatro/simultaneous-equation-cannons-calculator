@@ -58,6 +58,41 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
 
+  // State for PWA Install Prompt
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [isInstallable, setIsInstallable] = useState(false);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setIsInstallable(true);
+    };
+
+    const handleAppInstalled = () => {
+      setIsInstallable(false);
+      setDeferredPrompt(null);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
+    };
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      setIsInstallable(false);
+    }
+    setDeferredPrompt(null);
+  };
+
   // Calculate State Model (Memoized to prevent blocking main thread)
   const secState = useMemo(() => new SimultaneousEquationCannonsState(
     extraFusion,
@@ -184,6 +219,15 @@ function App() {
         >
           About
         </button>
+        {isInstallable && (
+          <button 
+            className="nav-bar-url"
+            style={{ marginLeft: 'auto' }}
+            onClick={handleInstallClick}
+          >
+            Install Offline App
+          </button>
+        )}
       </nav>
 
       <main className="view-enter">
