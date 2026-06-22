@@ -8,14 +8,14 @@
   <a href="https://github.com/avogatro/simultaneous-equation-cannons-calculator">
   </a>
 
-  <h3 align="center">Simultaneous Equation Cannons Helper Flask</h3>
+  <h3 align="center">Simultaneous Equation Cannon Calculator</h3>
 
   <p align="center">
-    Flask Web UI for playing the Card <b>Simultaneous Equation Cannons</b> in the Game of <b>Yu-Gi-Oh!</b>
+    Web App for calculating the Card <b>Simultaneous Equation Cannons</b> in the Game of <b>Yu-Gi-Oh!</b>
   </p>
 </div>
 
-<label>View Demo <a href="https://avogatro.pythonanywhere.com/sec_helper/">https://avogatro.pythonanywhere.com/sec_helper/</a></label>
+<label>View Demo <a href="https://avogatro.github.io/simultaneous-equation-cannons-calculator/">avogatro.github.io/simultaneous-equation-cannons-calculator/</a></label>
 
 
 <!-- TABLE OF CONTENTS -->
@@ -60,7 +60,9 @@ That is why I want to use this program to help me to play when I still know how 
 
 ### Built With
 
-* Flask
+* React
+* Vite
+* JavaScript
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -71,16 +73,13 @@ That is why I want to use this program to help me to play when I still know how 
 ## Getting Started
 
 ### Installation
-#### Use Python Interpreter:
-##### Hint: if u only use console and not the UI, u don't need anything else beside python3
-##### Hint: if "pip" don't exist use "pip3"
 
 - git clone this project
-- install Python 3 
-- pip install -r requirements.txt
-- copy file .env.example to .env
-- flask run --host=0.0.0.0 --debug
-- open url 0.0.0.0:5000 with any browser
+- navigate to the `js` directory: `cd js`
+- install Node.js (v18+)
+- run `npm install`
+- run `npm run dev`
+- open the provided localhost url with any browser
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,35 +103,8 @@ That is why I want to use this program to help me to play when I still know how 
 
 <img src="data\SEC_helper_web_banished.png" alt="screenshot02" width="800">
 
-#### Use only Python in console, no UI
- - open console, go to project folder
- - start python3 interactive console
-
- ```python
-from Model.simultaneous_equation_cannons_state import * # import module
-
-sec = SimultaneousEquationCannonsState([2, 3, 4, 5, 6], [2, 3, 4, 5, 6]) # setup extra deck
-sec.set_banish_zone_monster_level(fusion_levels=[], xyz_ranks=[4]) # setup previously banish xyz or fusion monsters
-sec.print_value_table() # ouput
-sec.reset_banish_zone_monster_level() # reset banish zone
-```
-
-##### Output
-```
-fusion_level    [2, 3, 4, 5, 6]
-xyz_rank        [2, 3, 4, 5, 6]
-banished fusion_level   []
-banished xyz_rank       [4]
-Monster Lvl/Rank to Match: 4     Possible Total Cards: [6]
-Monster Lvl/Rank to Match: 5     Possible Total Cards: [7, 8]
-Monster Lvl/Rank to Match: 6     Possible Total Cards: [6, 8, 9, 12, 14]
-Monster Lvl/Rank to Match: 7     Possible Total Cards: [7, 9, 10, 12, 13, 15]
-Monster Lvl/Rank to Match: 8     Possible Total Cards: [8, 10, 11, 13, 14, 16]
-Monster Lvl/Rank to Match: 9     Possible Total Cards: [9, 11, 12, 14, 15, 17]
-Monster Lvl/Rank to Match: 10    Possible Total Cards: [10, 12, 15, 16, 18]
-Monster Lvl/Rank to Match: 11    Possible Total Cards: [16, 17]
-Monster Lvl/Rank to Match: 12    Possible Total Cards: [18]
-```
+#### Python Backend
+The original Python/Flask codebase and console calculator have been moved to the `python/` subfolder.
 
 <!-- CONTRIBUTING -->
 ## Contributing
