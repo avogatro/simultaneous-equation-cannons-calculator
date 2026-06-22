@@ -39,6 +39,15 @@ jobs:
         working-directory: ./js
         run: npm run build
         
+      - name: Generate SPA fallback routes
+        working-directory: ./js
+        run: |
+          mkdir -p dist/extra dist/banished dist/help dist/about
+          cp dist/index.html dist/extra/index.html
+          cp dist/index.html dist/banished/index.html
+          cp dist/index.html dist/help/index.html
+          cp dist/index.html dist/about/index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
