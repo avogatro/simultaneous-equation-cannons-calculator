@@ -46,5 +46,5 @@ export default defineConfig({
       }
     })
   ],
-  base: '/simultaneous-equation-cannons-helper-flask/',
+  base: '/simultaneous-equation-cannons-calculator/',
 })

@@ -23,7 +23,7 @@ function App() {
 
   const navigate = (view) => {
     setCurrentView(view);
-    const basePath = '/simultaneous-equation-cannons-helper-flask/';
+    const basePath = '/simultaneous-equation-cannons-calculator/';
     const newPath = view === 'home' ? basePath : `${basePath}${view}`;
     window.history.pushState({ view }, '', newPath);
   };

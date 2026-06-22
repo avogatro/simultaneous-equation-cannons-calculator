@@ -5,7 +5,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/avogatro/simultaneous-equation-cannons-helper-flask">
+  <a href="https://github.com/avogatro/simultaneous-equation-cannons-calculator">
   </a>
 
   <h3 align="center">Simultaneous Equation Cannons Helper Flask</h3>
@@ -159,7 +159,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/avogatro/simultaneous-equation-cannons-helper-flask](https://github.com/avogatro/simultaneous-equation-cannons-helper-flask)
+Project Link: [https://github.com/avogatro/simultaneous-equation-cannons-calculator](https://github.com/avogatro/simultaneous-equation-cannons-calculator)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -9,7 +9,7 @@ export default function AboutView() {
           Github repo <a href="https://github.com/avogatro/simultaneous-equation-cannons-helper" style={{ color: 'var(--color-6)', textDecoration: 'none', fontWeight: 'bold' }}>Windows App here.</a>
         </p>
         <p className="resource-link" style={{ fontSize: '1.2rem' }}>
-          Github repo <a href="https://github.com/avogatro/simultaneous-equation-cannons-helper-flask" style={{ color: 'var(--color-6)', textDecoration: 'none', fontWeight: 'bold' }}>Web App here.</a>
+          Github repo <a href="https://github.com/avogatro/simultaneous-equation-cannons-calculator" style={{ color: 'var(--color-6)', textDecoration: 'none', fontWeight: 'bold' }}>Web App here.</a>
         </p>
       </div>
     </div>
