@@ -57,7 +57,7 @@ export default function HomeView({ secState, onResetBanished, onResetExtraDeck }
 
   return (
     <div className="app-container">
-      <h1>YGO SEC Helper</h1>
+      <h1>YGO SEC Calculator</h1>
       <h2>༼ つ ◕_◕ ༽つ</h2>
 
       <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', marginTop: '0.5em', marginBottom: '20px', alignItems: 'flex-start' }}>

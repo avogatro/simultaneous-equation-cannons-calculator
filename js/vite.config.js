@@ -25,9 +25,9 @@ export default defineConfig({
         navigateFallbackDenylist: [/sitemap\.xml$/, /robots\.txt$/]
       },
       manifest: {
-        name: 'Yu-Gi-Oh! SEC Helper',
-        short_name: 'SEC Helper',
-        description: 'Calculator and Helper for Simultaneous Equation Cannons',
+        name: 'Yu-Gi-Oh! SEC Calculator',
+        short_name: 'SEC Calculator',
+        description: 'Calculator for Simultaneous Equation Cannons',
         theme_color: '#1a1a1a',
         background_color: '#1a1a1a',
         display: 'standalone',
