@@ -1,8 +1,8 @@
 {
   "nav": {
-    "main": "Principal",
+    "main": "Page Principale",
     "extra": "Extra Deck",
-    "banished": "Monstres Bannis",
+    "banished": "Zone de Bannissement",
     "help": "Aide",
     "about": "À propos",
     "install": "Installer l'application hors ligne"
@@ -11,7 +11,7 @@
     "extra_title": "Monstres de l'Extra Deck",
     "extra_sub": "Sélectionnez les niveaux/rangs disponibles dans votre Extra Deck",
     "banished_title": "Monstres Bannis",
-    "banished_sub": "Sélectionnez des cibles SEC précédemment bannies",
+    "banished_sub": "Sélectionnez les Niveaux/Rangs précédemment bannis",
     "space": "Espace supplémentaire sur le pont :",
     "done": "Fait",
     "share": "Partager la configuration du pont supplémentaire",
@@ -19,8 +19,8 @@
     "reset": "Réinitialiser le banni",
     "xyz_sel": "Monstres Xyz (Rang)",
     "fusion_sel": "Monstres Fusion (Niveau)",
-    "lvl_cards": "Lvl \\ Cards",
-    "lvl": "Lvl"
+    "lvl_cards": "Niv \\ Cartes",
+    "lvl": "Niv"
   },
   "home": {
     "title": "Calculatrice Canons d'Équations Simultanées",
@@ -33,44 +33,44 @@
     "opp_level": "Niveau du monstre adverse",
     "total_banish": "Total de cartes à bannir",
     "targets": "Bannir les cibles",
-    "send_banish_zone": "Envoyer au Cimetière:",
-    "return_extra": "Renvoyer à l'Extra Deck:",
+    "send_banish_zone": "Bannir:",
+    "return_extra": "Retourner:",
     "reset": "Réinitialiser le banni",
-    "switch_list": "Switch to List",
-    "switch_grid": "Switch to Grid",
-    "select_total": "Select Total Number",
-    "get_more": "to Get More Info",
-    "error": "Extra Deck Monster Over 15! Reset",
-    "reset_extra": "Reset Extra Deck"
+    "switch_list": "Vue en Liste",
+    "switch_grid": "Vue en Tableau",
+    "select_total": "Sélectionnez le Nombre Total",
+    "get_more": "pour Plus d'Informations",
+    "error": "Monstres de l'Extra Deck au-dessus de 15!",
+    "reset_extra": "Réinitialiser l'Extra Deck"
   },
   "help": {
     "tut": "Tutoriels",
     "usage": "Usage",
-    "h1": "Utilisez la page Extra Deck pour configurer les niveaux et les classements disponibles.",
+    "h1": "Utilisez la page Extra Deck pour configurer les Niveaux/Rangs disponibles.",
     "h2": "Comptez le nombre de cartes :",
     "h3": "dans la main de votre adversaire",
     "h4": "du côté du terrain de votre adversaire",
     "h5": "dans ta main",
     "h6": "de ton côté du terrain",
     "h7": "Additionnez ces chiffres ensemble. C'est le total des cartes.",
-    "h8": "L'adversaire a des monstres sur le Terrain qui ne sont pas des monstres Lien, avec un rang/niveau dans les données. C'est le niveau de monstre à égaler.",
+    "h8": "L'adversaire a des monstres sur le terrain qui ne sont pas Lien, avec un Rang/Niveau. C'est le niveau à faire correspondre.",
     "h9": "Sur l'écran principal de cette application, vous pouvez voir dans chaque ligne :",
     "h10": "niveau de monstre correspondant",
     "h11": "suivi d'une liste du total des cartes",
-    "h12": "Si SEC résout et à ce moment-là :",
+    "h12": "Si Canons d'Équations Simultanées se résout et à ce moment-là:",
     "h13": "Un monstre avec un niveau correspondant est toujours sur le terrain et",
     "h14": "le total actuel de cartes est toujours du côté droit de ce niveau de monstre pour correspondre",
     "h15": "alors vous pouvez bannir tout le terrain de votre adversaire.",
     "h16": "Si vous cliquez sur le bouton Total des cartes, vous verrez exactement quoi envoyer et quoi retourner de la zone de bannissement.",
-    "h17": "Si vous activez un deuxième SEC, les monstres à envoyer et à renvoyer ne doivent pas nécessairement être les mêmes.",
-    "h18": "Utilisez la page Monstres bannis pour définir les monstres précédemment bannis."
+    "h17": "Si vous activez un deuxième Canons d'Équations Simultanées, les monstres à envoyer et à retourner n'ont pas besoin d'être les mêmes.",
+    "h18": "Utilisez la page Zone de Bannissement pour définir les monstres bannis."
   },
   "about": {
     "title": "À propos",
     "desc": "Cette application est un projet open source.",
     "github": "Consultez le code ou contribuez sur GitHub :",
     "version": "Version",
-    "created_by": "Created by",
-    "source_code": "source code"
+    "created_by": "Créé par",
+    "source_code": "code source"
   }
 }

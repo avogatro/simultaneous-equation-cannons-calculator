@@ -1,8 +1,8 @@
 {
   "nav": {
-    "main": "Principal",
+    "main": "Página Principal",
     "extra": "Deck Extra",
-    "banished": "Monstruos Desterrados",
+    "banished": "Zona de Destierro",
     "help": "Ayuda",
     "about": "Acerca de",
     "install": "Instalar aplicación sin conexión"
@@ -11,7 +11,7 @@
     "extra_title": "Monstruos del Deck Extra",
     "extra_sub": "Selecciona los niveles/rangos disponibles en tu Deck Extra",
     "banished_title": "Monstruos Desterrados",
-    "banished_sub": "Seleccione objetivos de la SEC previamente desterrados",
+    "banished_sub": "Selecciona los Niveles/Rangos desterrados previamente",
     "space": "Espacio adicional en cubierta:",
     "done": "Hecho",
     "share": "Compartir configuración de plataforma adicional",
@@ -19,8 +19,8 @@
     "reset": "Reiniciar desterrado",
     "xyz_sel": "Rango de Monstruos Xyz",
     "fusion_sel": "Nivel de Monstruos de Fusión",
-    "lvl_cards": "Lvl \\ Cards",
-    "lvl": "Lvl"
+    "lvl_cards": "Nivel \\ Cartas",
+    "lvl": "Niv"
   },
   "home": {
     "title": "Calculadora de Cañones de Ecuaciones Simultáneas",
@@ -33,44 +33,44 @@
     "opp_level": "Nivel del monstruo oponente",
     "total_banish": "Total de cartas para desterrar",
     "targets": "Desterrar objetivos",
-    "send_banish_zone": "Mandar al Cementerio:",
-    "return_extra": "Devolver al Deck Extra:",
+    "send_banish_zone": "Desterrar:",
+    "return_extra": "Devolver:",
     "reset": "Reiniciar desterrado",
-    "switch_list": "Switch to List",
-    "switch_grid": "Switch to Grid",
-    "select_total": "Select Total Number",
-    "get_more": "to Get More Info",
-    "error": "Extra Deck Monster Over 15! Reset",
-    "reset_extra": "Reset Extra Deck"
+    "switch_list": "Vista de Lista",
+    "switch_grid": "Vista de Tabla",
+    "select_total": "Seleccionar Número Total",
+    "get_more": "para Obtener Más Información",
+    "error": "¡Monstruos del Deck Extra superan los 15!",
+    "reset_extra": "Restablecer Deck Extra"
   },
   "help": {
     "tut": "Tutoriales",
     "usage": "Uso",
-    "h1": "Utilice la página Extra Deck para configurar los niveles y rangos disponibles.",
+    "h1": "Usa la página del Deck Extra para configurar los Niveles/Rangos disponibles.",
     "h2": "Cuente el número de cartas:",
     "h3": "en la mano de tu oponente",
     "h4": "en el lado del campo de tu oponente",
     "h5": "en tu mano",
     "h6": "en tu lado del campo",
     "h7": "Suma esos números. Estas son las tarjetas totales.",
-    "h8": "El oponente tiene monstruos en el campo que no son monstruos de Enlace, con un rango/nivel en los datos. Este es el nivel de monstruo a igualar.",
+    "h8": "El oponente tiene monstruos en el campo que no son de Enlace, con un Rango/Nivel. Este es el nivel a coincidir.",
     "h9": "En la pantalla principal de esta aplicación, puedes ver en cada fila:",
     "h10": "nivel de monstruo para igualar",
     "h11": "seguido de una lista del total de tarjetas",
-    "h12": "Si la SEC resuelve y en ese momento:",
+    "h12": "Si Cañones de Ecuaciones Simultáneas se resuelve y en ese momento:",
     "h13": "Un monstruo con un nivel comparable todavía está en el campo y",
     "h14": "el total de cartas actual todavía está en el lado derecho de ese nivel de monstruo para que coincida",
     "h15": "entonces podrás desterrar todo el campo de tu oponente.",
     "h16": "Si haces clic en el botón de total de cartas, verás exactamente qué enviar y qué devolver de la zona de destierro.",
-    "h17": "Si activas una segunda SEC, los monstruos a enviar y a devolver no tienen por qué ser los mismos.",
-    "h18": "Utilice la página Monstruos desterrados para definir los monstruos previamente desterrados."
+    "h17": "Si activas un segundo Cañones de Ecuaciones Simultáneas, los monstruos a enviar y devolver no tienen que ser los mismos.",
+    "h18": "Usa la página de la Zona de Destierro para definir los monstruos desterrados."
   },
   "about": {
     "title": "Acerca de",
     "desc": "Esta aplicación es un proyecto de código abierto.",
     "github": "Consulte el código o contribuya en GitHub:",
     "version": "Versión",
-    "created_by": "Created by",
-    "source_code": "source code"
+    "created_by": "Creado por",
+    "source_code": "código fuente"
   }
 }
