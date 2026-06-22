@@ -1,7 +1,9 @@
 import { useState, useMemo, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SimultaneousEquationCannonsState } from './Model';
 
 export default function HomeView({ secState, onResetBanished, onResetExtraDeck }) {
+  const { t } = useTranslation();
   const [selectedSolution, setSelectedSolution] = useState(null);
   const [isMatrixView, setIsMatrixView] = useState(() => {
     const saved = localStorage.getItem('sec_matrix_view');
@@ -57,44 +59,44 @@ export default function HomeView({ secState, onResetBanished, onResetExtraDeck }
 
   return (
     <div className="app-container">
-      <h1>Simultaneous Equation Cannon Calculator</h1>
+      <h1>{t('home.title')}</h1>
       <h2>༼ つ ◕_◕ ༽つ</h2>
 
       <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', marginTop: '0.5em', marginBottom: '20px', alignItems: 'flex-start' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           <button className="reset-btn" onClick={handleReset} style={{ margin: 0, width: '100%' }}>
-            Reset Banished
+            {t('home.reset')}
           </button>
           <button
             className="btn-primary"
             onClick={() => setIsMatrixView(!isMatrixView)}
             style={{ margin: 0, width: '100%' }}
           >
-            {isMatrixView ? 'Switch to List' : 'Switch to Grid'}
+            {isMatrixView ? t('home.switch_list', { defaultValue: 'Switch to List' }) : t('home.switch_grid', { defaultValue: 'Switch to Grid' })}
           </button>
         </div>
 
         {hasError ? (
           <div className="solution-info" style={{ marginTop: 0 }}>
-            <p>Extra Deck Monster Over 15! Reset</p>
+            <p>{t('home.error', { defaultValue: 'Extra Deck Monster Over 15! Reset' })}</p>
             <button className="reset-btn" onClick={onResetExtraDeck} style={{ marginTop: '10px' }}>
-              Reset Extra Deck
+              {t('home.reset_extra', { defaultValue: 'Reset Extra Deck' })}
             </button>
           </div>
         ) : (
           <div className="solution-info" style={{ marginTop: 0 }}>
             {!selectedSolution ? (
               <div>
-                <p>Select Total Number</p>
-                <p>to Get More Info</p>
+                <p>{t('home.select_total', { defaultValue: 'Select Total Number' })}</p>
+                <p>{t('home.get_more', { defaultValue: 'to Get More Info' })}</p>
               </div>
             ) : (
               <div className="solution-details-grid">
-                <div className="grid-label">Send</div>
+                <div className="grid-label">{t('home.send_banish_zone').replace(':', '')}</div>
                 <div className="grid-value"><span className="badge-xyz">Xyz</span> {selectedSolution.send_xyz_rank}</div>
                 <div className="grid-value"><span className="badge-fusion">Fusion</span> {selectedSolution.send_fusion_level}</div>
 
-                <div className="grid-label">Return</div>
+                <div className="grid-label">{t('home.return_extra').replace(':', '')}</div>
                 <div className="grid-value"><span className="badge-xyz">Xyz</span> {selectedSolution.returned_xyz_rank}</div>
                 <div className="grid-value"><span className="badge-fusion">Fusion</span> {selectedSolution.returned_fusion_level}</div>
               </div>
@@ -106,7 +108,7 @@ export default function HomeView({ secState, onResetBanished, onResetExtraDeck }
       <div className="solution-table">
         {isMatrixView && allTotalCards.length > 0 && (
           <div className="header-row">
-            <div className="header-spacer">Lvl \ Cards</div>
+            <div className="header-spacer">{t('deck.lvl_cards', { defaultValue: 'Lvl \\ Cards' })}</div>
             {allTotalCards.map((total) => (
               <div key={total} className="header-label" style={{ color: colors[total] }}>
                 {total}
@@ -124,7 +126,7 @@ export default function HomeView({ secState, onResetBanished, onResetExtraDeck }
 
             return (
               <div key={levelKey} className="solution-row">
-                <div className="level-label">Lvl {level}:</div>
+                <div className="level-label">{t('deck.lvl', { defaultValue: 'Lvl' })} {level}:</div>
                 <div className="cards-container" style={{ flexWrap: 'nowrap' }}>
                   {allTotalCards.map((total) => {
                     const currentSol = currentSolutions.find((s) => s.total_cards === total);
@@ -179,7 +181,7 @@ export default function HomeView({ secState, onResetBanished, onResetExtraDeck }
 
             return (
               <div key={levelKey} className="solution-row">
-                <div className="level-label">Lvl {level}:</div>
+                <div className="level-label">{t('deck.lvl', { defaultValue: 'Lvl' })} {level}:</div>
                 <div className="cards-container" style={{ flexWrap: 'wrap' }}>
                   {currentSolutions.map((sol, i) => {
                     const hctColor = colors[sol.total_cards];

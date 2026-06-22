@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function DeckConfigView({ title, subtitle, fusion, setFusion, xyz, setXyz, onSave, showReset }) {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   const isExtraDeck = !showReset;
   const totalSlots = fusion.length + (xyz.length * 2);
@@ -34,13 +36,13 @@ export default function DeckConfigView({ title, subtitle, fusion, setFusion, xyz
 
       {isExtraDeck && (
         <div style={{ marginBottom: '1rem', fontSize: '1.2rem', color: slotsWarning ? 'var(--color-8)' : 'var(--white)' }}>
-          Extra Deck Space: <strong>{totalSlots} / 15</strong>
+          {t('deck.space')} <strong>{totalSlots} / 15</strong>
         </div>
       )}
 
       <div style={{ marginTop: '20px' }}>
         <button className="save-btn" onClick={onSave} style={{ marginRight: '10px' }}>
-          Done
+          {t('deck.done')}
         </button>
         {isExtraDeck && (
           <button
@@ -55,18 +57,18 @@ export default function DeckConfigView({ title, subtitle, fusion, setFusion, xyz
               setTimeout(() => setCopied(false), 2000);
             }}
           >
-            {copied ? 'Copied!' : 'Share Extra Deck Setup'}
+            {copied ? t('deck.copied') : t('deck.share')}
           </button>
         )}
         {showReset && (
           <button className="reset-btn" onClick={handleReset}>
-            Reset Banished
+            {t('deck.reset')}
           </button>
         )}
       </div>
 
       <div style={{ marginTop: '2rem' }}>
-        <label className="checkbox-group-label"><span className="badge-xyz">Xyz</span> Monster Rank Selection</label>
+        <label className="checkbox-group-label"><span className="badge-xyz">Xyz</span> {t('deck.xyz_sel')}</label>
         <div className="checkbox-group">
           {[...Array(13)].map((_, i) => {
             const rank = i + 1;
@@ -84,7 +86,7 @@ export default function DeckConfigView({ title, subtitle, fusion, setFusion, xyz
           })}
         </div>
 
-        <label className="checkbox-group-label" style={{ marginTop: '2rem' }}><span className="badge-fusion">Fusion</span> Monster Level Selection</label>
+        <label className="checkbox-group-label" style={{ marginTop: '2rem' }}><span className="badge-fusion">Fusion</span> {t('deck.fusion_sel')}</label>
         <div className="checkbox-group">
           {[...Array(12)].map((_, i) => {
             const level = i + 1;

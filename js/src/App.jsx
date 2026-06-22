@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SimultaneousEquationCannonsState } from './Model';
 import HomeView from './HomeView';
 import DeckConfigView from './DeckConfigView';
@@ -10,6 +11,8 @@ const DEFAULT_EXTRA_FUSION = [2, 3, 4, 5, 6];
 const DEFAULT_EXTRA_XYZ = [2, 3, 4, 5, 6];
 
 function App() {
+  const { t, i18n } = useTranslation();
+
   const getInitialView = () => {
     const path = window.location.pathname;
     if (path.includes('/extra')) return 'extra';
@@ -150,8 +153,8 @@ function App() {
       case 'extra':
         return (
           <DeckConfigView 
-            title="Extra Deck Monsters" 
-            subtitle="Select the levels/ranks available in your Extra Deck"
+            title={t('deck.extra_title')} 
+            subtitle={t('deck.extra_sub')}
             fusion={extraFusion}
             setFusion={setExtraFusion}
             xyz={extraXyz}
@@ -162,8 +165,8 @@ function App() {
       case 'banished':
         return (
           <DeckConfigView 
-            title="Banished Monsters" 
-            subtitle="Select previously banished SEC targets"
+            title={t('deck.banished_title')} 
+            subtitle={t('deck.banished_sub')}
             fusion={banishedFusion}
             setFusion={setBanishedFusion}
             xyz={banishedXyz}
@@ -193,41 +196,69 @@ function App() {
           className={`nav-bar-url ${currentView === 'home' ? 'active' : ''}`}
           onClick={() => navigate('home')}
         >
-          Main
+          {t('nav.main')}
         </button>
         <button 
           className={`nav-bar-url ${currentView === 'extra' ? 'active' : ''}`}
           onClick={() => navigate('extra')}
         >
-          Extra Deck
+          {t('nav.extra')}
         </button>
         <button 
           className={`nav-bar-url ${currentView === 'banished' ? 'active' : ''}`}
           onClick={() => navigate('banished')}
         >
-          Banished Monsters
+          {t('nav.banished')}
         </button>
         <button 
           className={`nav-bar-url ${currentView === 'help' ? 'active' : ''}`}
           onClick={() => navigate('help')}
         >
-          Help
+          {t('nav.help')}
         </button>
         <button 
           className={`nav-bar-url ${currentView === 'about' ? 'active' : ''}`}
           onClick={() => navigate('about')}
         >
-          About
+          {t('nav.about')}
         </button>
-        {isInstallable && (
-          <button 
-            className="nav-bar-url"
-            style={{ marginLeft: 'auto' }}
-            onClick={handleInstallClick}
+        <div style={{ marginLeft: 'auto', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          {isInstallable && (
+            <button 
+              className="nav-bar-url"
+              onClick={handleInstallClick}
+            >
+              {t('nav.install')}
+            </button>
+          )}
+          <select 
+            className="nav-bar-url" 
+            style={{ backgroundColor: 'transparent', border: '1px solid var(--border)', color: 'var(--text)', padding: '0.5rem', borderRadius: '4px', cursor: 'pointer' }}
+            value={i18n.language ? (i18n.language.includes('zh') ? 'zh-CN' : i18n.language.split('-')[0]) : 'en'}
+            onChange={(e) => i18n.changeLanguage(e.target.value)}
           >
-            Install Offline App
-          </button>
-        )}
+            <option value="en" style={{ color: '#000' }}>English</option>
+            <option value="es" style={{ color: '#000' }}>Español</option>
+            <option value="zh-CN" style={{ color: '#000' }}>中文</option>
+            <option value="hi" style={{ color: '#000' }}>हिन्दी</option>
+            <option value="bn" style={{ color: '#000' }}>বাংলা</option>
+            <option value="pt" style={{ color: '#000' }}>Português</option>
+            <option value="ru" style={{ color: '#000' }}>Русский</option>
+            <option value="ja" style={{ color: '#000' }}>日本語</option>
+            <option value="de" style={{ color: '#000' }}>Deutsch</option>
+            <option value="fr" style={{ color: '#000' }}>Français</option>
+            <option value="it" style={{ color: '#000' }}>Italiano</option>
+            <option value="ko" style={{ color: '#000' }}>한국어</option>
+            <option value="ar" style={{ color: '#000' }}>العربية</option>
+            <option value="id" style={{ color: '#000' }}>Bahasa Indonesia</option>
+            <option value="ur" style={{ color: '#000' }}>اردو</option>
+            <option value="tr" style={{ color: '#000' }}>Türkçe</option>
+            <option value="vi" style={{ color: '#000' }}>Tiếng Việt</option>
+            <option value="pl" style={{ color: '#000' }}>Polski</option>
+            <option value="th" style={{ color: '#000' }}>ไทย</option>
+            <option value="nl" style={{ color: '#000' }}>Nederlands</option>
+          </select>
+        </div>
       </nav>
 
       <main className="view-enter">
@@ -236,7 +267,7 @@ function App() {
 
       <footer className="footer" style={{ marginTop: 'auto', padding: '2rem 0', textAlign: 'center' }}>
         <label htmlFor="author">
-          2025 Created by <a href="https://github.com/avogatro/" className="author" id="author" style={{ color: 'var(--color-6)', textDecoration: 'none', fontWeight: 'bold' }}>Avogatro</a>
+          2025 {t('about.created_by', { defaultValue: 'Created by' })} <a href="https://github.com/avogatro/" className="author" id="author" style={{ color: 'var(--color-6)', textDecoration: 'none', fontWeight: 'bold' }}>Avogatro</a>
         </label>
       </footer>
     </div>
