@@ -30,3 +30,13 @@ Based on the commit history and project documentation, this project has evolved 
 ## 7. Domain Logic (Yu-Gi-Oh! TCG)
 - Engineered a complex combinatorial calculator resolving the card math for "Simultaneous Equation Cannons".
 - Features tracking for "Extra Deck" levels/ranks, updating calculations dynamically based on previously banished monsters and counting total extra deck cards.
+
+## 8. Internationalization (i18n) & Localization
+- **Multi-Language Support**: Fully integrated `react-i18next` to support 20 languages, seamlessly detecting user locale while allowing manual selection via the UI.
+- **Deep Yu-Gi-Oh! Localization**: Extensively localized translations to abide by official regional TCG/OCG terminology (e.g., native regional terms for "Extra Deck", "Banish Zone", "Rank", "Level" in Spanish, Arabic, Japanese, Traditional Chinese, etc.) rather than literal machine translations.
+- **UI Naming Conventions**: Audited and corrected language-specific UI conventions, such as using appropriate infinitive verb forms for buttons in Romance languages and correct noun capitalizations.
+- **Automation Scripts**: Engineered custom Node.js JSON mapping scripts to rapidly seed, inject, and structure missing translation keys across vast sets of language dictionaries efficiently, bypassing third-party translation API rate-limits.
+
+## 9. SEO & PWA Discoverability
+- **PWA Prompting**: Integrated a native, localized "Install Offline App" button directly into the main navigation to boost user adoption of the Progressive Web App feature.
+- **Search Engine Indexing**: Integrated Bing Webmaster verification tags directly into the application header for improved search engine indexing.

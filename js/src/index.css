@@ -279,7 +279,7 @@ h2 {
 
 .solution-details-grid {
   display: grid;
-  grid-template-columns: 100px 130px 150px;
+  grid-template-columns: max-content 130px 150px;
   /* Fixed column widths prevent horizontal shifting when numbers change */
   gap: 15px 10px;
   text-align: left;

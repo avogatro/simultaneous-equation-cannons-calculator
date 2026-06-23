@@ -38,24 +38,24 @@ function App() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
-  
+
   // State for Deck Configuration
   const [extraFusion, setExtraFusion] = useState(() => {
     const saved = localStorage.getItem('sec_extra_fusion');
     return saved ? JSON.parse(saved) : DEFAULT_EXTRA_FUSION;
   });
-  
+
   const [extraXyz, setExtraXyz] = useState(() => {
     const saved = localStorage.getItem('sec_extra_xyz');
     return saved ? JSON.parse(saved) : DEFAULT_EXTRA_XYZ;
   });
-  
+
   // State for Banished Monsters
   const [banishedFusion, setBanishedFusion] = useState(() => {
     const saved = localStorage.getItem('sec_banished_fusion');
     return saved ? JSON.parse(saved) : [];
   });
-  
+
   const [banishedXyz, setBanishedXyz] = useState(() => {
     const saved = localStorage.getItem('sec_banished_xyz');
     return saved ? JSON.parse(saved) : [];
@@ -152,8 +152,8 @@ function App() {
         return <HomeView secState={secState} onResetBanished={handleResetBanished} onResetExtraDeck={handleResetExtraDeck} />;
       case 'extra':
         return (
-          <DeckConfigView 
-            title={t('deck.extra_title')} 
+          <DeckConfigView
+            title={t('deck.extra_title')}
             subtitle={t('deck.extra_sub')}
             fusion={extraFusion}
             setFusion={setExtraFusion}
@@ -164,8 +164,8 @@ function App() {
         );
       case 'banished':
         return (
-          <DeckConfigView 
-            title={t('deck.banished_title')} 
+          <DeckConfigView
+            title={t('deck.banished_title')}
             subtitle={t('deck.banished_sub')}
             fusion={banishedFusion}
             setFusion={setBanishedFusion}
@@ -192,31 +192,31 @@ function App() {
             <img src={`${import.meta.env.BASE_URL}img/icon.webp`} alt="logo" className="logo-img" />
           </button>
         </div>
-        <button 
+        <button
           className={`nav-bar-url ${currentView === 'home' ? 'active' : ''}`}
           onClick={() => navigate('home')}
         >
           {t('nav.main')}
         </button>
-        <button 
+        <button
           className={`nav-bar-url ${currentView === 'extra' ? 'active' : ''}`}
           onClick={() => navigate('extra')}
         >
           {t('nav.extra')}
         </button>
-        <button 
+        <button
           className={`nav-bar-url ${currentView === 'banished' ? 'active' : ''}`}
           onClick={() => navigate('banished')}
         >
           {t('nav.banished')}
         </button>
-        <button 
+        <button
           className={`nav-bar-url ${currentView === 'help' ? 'active' : ''}`}
           onClick={() => navigate('help')}
         >
           {t('nav.help')}
         </button>
-        <button 
+        <button
           className={`nav-bar-url ${currentView === 'about' ? 'active' : ''}`}
           onClick={() => navigate('about')}
         >
@@ -224,22 +224,24 @@ function App() {
         </button>
         <div style={{ marginLeft: 'auto', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
           {isInstallable && (
-            <button 
+            <button
               className="nav-bar-url"
               onClick={handleInstallClick}
             >
               {t('nav.install')}
             </button>
           )}
-          <select 
-            className="nav-bar-url" 
+          <select
+            aria-label="Select Language"
+            className="nav-bar-url"
             style={{ backgroundColor: 'transparent', border: '1px solid var(--border)', color: 'var(--text)', padding: '0.5rem', borderRadius: '4px', cursor: 'pointer' }}
-            value={i18n.language ? (i18n.language.includes('zh') ? 'zh-CN' : i18n.language.split('-')[0]) : 'en'}
+            value={i18n.language ? (i18n.language.includes('zh-TW') || i18n.language.includes('zh-HK') ? 'zh-TW' : i18n.language.includes('zh') ? 'zh-CN' : i18n.language.split('-')[0]) : 'en'}
             onChange={(e) => i18n.changeLanguage(e.target.value)}
           >
             <option value="en" style={{ color: '#000' }}>English</option>
             <option value="es" style={{ color: '#000' }}>Español</option>
-            <option value="zh-CN" style={{ color: '#000' }}>中文</option>
+            <option value="zh-CN" style={{ color: '#000' }}>简体中文</option>
+            <option value="zh-TW" style={{ color: '#000' }}>繁體中文</option>
             <option value="hi" style={{ color: '#000' }}>हिन्दी</option>
             <option value="bn" style={{ color: '#000' }}>বাংলা</option>
             <option value="pt" style={{ color: '#000' }}>Português</option>
