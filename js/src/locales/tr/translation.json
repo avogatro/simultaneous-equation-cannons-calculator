@@ -4,7 +4,7 @@
     "extra": "Ekstra Deste",
     "banished": "Sürgün Bölgesi",
     "help": "Yardım",
-    "about": "Hakkında",
+    "about": "Hakkımızda",
     "install": "Uygulamayı Yükle"
   },
   "deck": {
@@ -66,7 +66,7 @@
     "h18": "Önceden sürgün edilen canavarları tanımlamak için Sürgün Bölgesi sayfasını kullanın."
   },
   "about": {
-    "title": "Hakkında",
+    "title": "Hakkımızda",
     "desc": "Bu uygulama açık kaynaklı bir projedir.",
     "github": "Kodu inceleyin veya GitHub'a katkıda bulunun:",
     "version": "Sürüm",

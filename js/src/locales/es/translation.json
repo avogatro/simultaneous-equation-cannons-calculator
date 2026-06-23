@@ -4,7 +4,7 @@
     "extra": "Deck Extra",
     "banished": "Zona de Destierro",
     "help": "Ayuda",
-    "about": "Acerca de",
+    "about": "Sobre nosotros",
     "install": "Instalar aplicación"
   },
   "deck": {
@@ -66,7 +66,7 @@
     "h18": "Usa la página de la Zona de Destierro para definir los monstruos previamente desterrados."
   },
   "about": {
-    "title": "Acerca de",
+    "title": "Sobre nosotros",
     "desc": "Esta aplicación es un proyecto de código abierto.",
     "github": "Consulta el código o contribuye en GitHub:",
     "version": "Versión",

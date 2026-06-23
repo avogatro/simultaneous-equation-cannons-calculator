@@ -4,7 +4,7 @@
     "extra": "Deck Adicional",
     "banished": "Zona de Banimento",
     "help": "Ajuda",
-    "about": "Sobre",
+    "about": "Sobre nós",
     "install": "Instalar Aplicativo"
   },
   "deck": {
@@ -66,7 +66,7 @@
     "h18": "Use a página da Zona de Banimento para definir os monstros previamente banidos."
   },
   "about": {
-    "title": "Sobre",
+    "title": "Sobre nós",
     "desc": "Este aplicativo é um projeto de código aberto.",
     "github": "Verifique o código ou contribua no GitHub:",
     "version": "Versão",

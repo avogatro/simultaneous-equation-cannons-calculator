@@ -4,7 +4,7 @@
     "extra": "Dek Ekstra",
     "banished": "Zona Banish",
     "help": "Bantuan",
-    "about": "Tentang",
+    "about": "Tentang Kami",
     "install": "Instal Aplikasi Offline"
   },
   "deck": {
@@ -66,7 +66,7 @@
     "h18": "Gunakan halaman Zona Banish untuk menentukan monster yang dibanish."
   },
   "about": {
-    "title": "Tentang",
+    "title": "Tentang Kami",
     "desc": "Aplikasi ini adalah proyek open-source.",
     "github": "Lihat kode atau berkontribusi di GitHub:",
     "version": "Version",

@@ -4,7 +4,7 @@
     "extra": "Extra Deck",
     "banished": "Zona Bandita",
     "help": "Aiuto",
-    "about": "Informazioni",
+    "about": "Chi siamo",
     "install": "Installa App"
   },
   "deck": {
@@ -66,7 +66,7 @@
     "h18": "Usa la pagina della Zona Bandita per definire i mostri precedentemente banditi."
   },
   "about": {
-    "title": "Informazioni",
+    "title": "Chi siamo",
     "desc": "Questa app è un progetto open-source.",
     "github": "Controlla il codice o contribuisci su GitHub:",
     "version": "Versione",

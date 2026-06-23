@@ -4,7 +4,7 @@
     "extra": "Bộ Bài Phụ",
     "banished": "Khu Vực Loại Bỏ",
     "help": "Trợ Giúp",
-    "about": "Giới Thiệu",
+    "about": "Về chúng tôi",
     "install": "Cài Đặt Ứng Dụng Ngoại Tuyến"
   },
   "deck": {
@@ -66,7 +66,7 @@
     "h18": "Sử dụng trang Khu Vực Loại Bỏ để định nghĩa các quái thú đã loại bỏ."
   },
   "about": {
-    "title": "Giới Thiệu",
+    "title": "Về chúng tôi",
     "desc": "Ứng dụng này là một dự án mã nguồn mở.",
     "github": "Kiểm tra mã nguồn hoặc đóng góp trên GitHub:",
     "version": "Version",

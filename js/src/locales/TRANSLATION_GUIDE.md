@@ -28,7 +28,7 @@ These are the links found in the main navigation menu/sidebar.
 * `extra`: "Extra Deck" - The setup page where users input which Fusion and Xyz monsters they actually own in their Extra Deck.
 * `banished`: "Banish Zone" - The page where users tell the app which Extra Deck monsters they have *already* banished earlier in the duel.
 * `help`: "Help" - The tutorials and usage guide.
-* `about`: "About" - Open source credits and version info.
+* `about`: "About us" - Open source credits and version info.
 * `install`: "Install Offline App" - Prompt to install the PWA (Progressive Web App) to their device.
 
 ### 2. Extra Deck Setup (`deck`)

@@ -4,7 +4,7 @@
     "extra": "Extra Deck",
     "banished": "Verbannen Zone",
     "help": "Help",
-    "about": "Over",
+    "about": "Over ons",
     "install": "Installeer app"
   },
   "deck": {
@@ -66,7 +66,7 @@
     "h18": "Gebruik de Verbannen Zone-pagina om eerder verbannen monsters aan te geven."
   },
   "about": {
-    "title": "Over",
+    "title": "Over ons",
     "desc": "Deze app is een open-source project.",
     "github": "Bekijk de code of draag bij op GitHub:",
     "version": "Versie",
