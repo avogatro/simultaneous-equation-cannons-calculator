@@ -33,7 +33,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['img/icon.webp', 'img/icon.png', 'img/icon50.png', 'fonts/poppins-regular.woff2', 'fonts/poppins-semibold.woff2'],
       workbox: {
-        navigateFallbackDenylist: [/sitemap\.xml$/, /robots\.txt$/]
+        navigateFallbackDenylist: [/sitemap\.xml$/, /testsitemap\.xml$/, /robots\.txt$/]
       },
       manifest: {
         name: 'Yu-Gi-Oh! SEC Calculator',
