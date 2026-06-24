@@ -1,3 +1,6 @@
+// compress png for browser performance optimization
+// usage: node compress.mjs
+
 import sharp from 'sharp';
 import fs from 'fs/promises';
 import path from 'path';
@@ -16,21 +19,21 @@ const filesToConvert = [
 for (const { src, dest } of filesToConvert) {
   const srcPath = path.join(dir, src);
   const destPath = path.join(dir, dest);
-  
+
   try {
     const srcStats = await fs.stat(srcPath);
-    
+
     // Delete target if exists to avoid EPERM rename issues
     try {
       await fs.unlink(destPath);
-    } catch(e) {}
-    
+    } catch (e) { }
+
     await sharp(srcPath)
-      .webp({ quality: 60, effort: 6 }) 
+      .webp({ quality: 60, effort: 6 })
       .toFile(destPath);
-      
+
     const destStats = await fs.stat(destPath);
-    console.log(`${dest}: Original PNG was ${Math.round(srcStats.size/1024)}KB -> Compressed WebP is ${Math.round(destStats.size/1024)}KB`);
+    console.log(`${dest}: Original PNG was ${Math.round(srcStats.size / 1024)}KB -> Compressed WebP is ${Math.round(destStats.size / 1024)}KB`);
   } catch (e) {
     console.error(`Failed to convert ${src} to ${dest}:`, e.message);
   }
