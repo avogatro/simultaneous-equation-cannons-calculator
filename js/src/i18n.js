@@ -39,4 +39,12 @@ i18n
     }
   });
 
+// Automatically set document direction (RTL/LTR) based on the language
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.dir = i18n.dir(lng);
+});
+
+// Set the initial direction
+document.documentElement.dir = i18n.dir(i18n.language);
+
 export default i18n;
