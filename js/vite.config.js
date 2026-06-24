@@ -10,12 +10,23 @@ export default defineConfig({
   plugins: [
     react(),
     {
-      name: 'copy-404',
+      name: 'copy-404-and-routes',
       closeBundle() {
-        fs.copyFileSync(
-          path.resolve(process.cwd(), 'dist/index.html'),
-          path.resolve(process.cwd(), 'dist/404.html')
-        );
+        const dist = path.resolve(process.cwd(), 'dist');
+        const indexFile = path.join(dist, 'index.html');
+        
+        // Copy 404.html
+        fs.copyFileSync(indexFile, path.join(dist, '404.html'));
+        
+        // Copy to specific route folders to prevent 404 status codes on GitHub pages for SEO
+        const routes = ['extra', 'banished', 'help', 'about'];
+        routes.forEach(route => {
+          const routeDir = path.join(dist, route);
+          if (!fs.existsSync(routeDir)) {
+            fs.mkdirSync(routeDir, { recursive: true });
+          }
+          fs.copyFileSync(indexFile, path.join(routeDir, 'index.html'));
+        });
       }
     },
     VitePWA({
