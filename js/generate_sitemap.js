@@ -61,4 +61,7 @@ sitemapXml += `</urlset>\n`;
 const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
 fs.writeFileSync(sitemapPath, sitemapXml);
 
+const testSitemapPath = path.join(process.cwd(), 'public', 'testsitemap.xml');
+fs.writeFileSync(testSitemapPath, sitemapXml);
+
 console.log(`Generated sitemap with ${ROUTES.length} routes and ${languages.length} language alternates per route.`);
